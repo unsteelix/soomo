@@ -1,0 +1,70 @@
+@import '../../../style/functions';
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+.soomo-outreach {
+  .studentsDynamic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 115px;
+    background-color: $soomo-green;
+    color: $soomo-inverted-color;
+    font-size: 26px;
+    line-height: 37px;
+    width: 100%;
+
+    margin-bottom: 70px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 0.9rem;
+    }
+
+    div {
+      position: relative;
+      width: 60%;
+
+      @include media-breakpoint-down(sm) {
+      }
+
+      &:before {
+        position: absolute;
+        left: -80px;
+        top: 10px;
+        display: inline-block;
+        background-size: contain;
+        content: '';
+        width: 46px;
+        height: 46px;
+
+        @include media-breakpoint-up(lg) {
+          top: 2px;
+          left: -45px;
+          width: 25px;
+          height: 25px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          left: -64px;
+          top: 27px;
+        }
+      }
+
+      &.studentsDynamic-up {
+        &:before {
+          background-image: url('../../../style/icons/up_dynamic.svg');
+        }
+      }
+
+      &.studentsDynamic-down {
+        &:before {
+          background-image: url('../../../style/icons/down_dynamic.svg');
+        }
+      }
+    }
+  }
+}

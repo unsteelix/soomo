@@ -1,0 +1,89 @@
+@import '../../../style/functions';
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+.soomo-outreach {
+  font-size: 25px;
+
+  .soomo-message-sender-container {
+    width: 100%;
+  }
+
+  .messageSenderHeader {
+    .messageSenderHeader-to {
+      display: inline-flex;
+      font-size: 16px;
+    }
+
+    & > div:first-child {
+      margin-right: 20px;
+    }
+
+    .messageSenderHeader-students {
+      width: 80%;
+      padding-left: 40px;
+      color: #5882f2;
+
+      div {
+        display: inline-block;
+      }
+    }
+
+    .messageSenderHeader-heading {
+      display: inline-block;
+      float: left;
+      margin-top: -40px;
+      // margin-bottom: 20px;
+      position: relative;
+    }
+  }
+
+  .messageSenderBody {
+    padding-top: 15px;
+    display: flex;
+    width: 100%;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      content: ' ';
+      display: block;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+
+    & > * {
+      display: inline-block;
+    }
+
+    .messageSenderBody-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      margin-top: 15px;
+      position: relative;
+      top: 10px;
+      background: url('../../../style/icons/message-icon.svg');
+    }
+
+    form {
+      width: 100%;
+      margin-top: 15px;
+
+      textarea.form-control {
+        border: none;
+        font-size: 15px;
+        height: 200px;
+        resize: none;
+      }
+
+      button {
+        float: right;
+        width: 120px;
+        height: 34px;
+        padding: 0 15px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

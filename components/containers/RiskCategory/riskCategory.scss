@@ -1,0 +1,121 @@
+@import '../../../style/functions';
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+.soomo-outreach {
+  .riskCategory {
+    .riskCategory-head {
+      @include soomo-box-shadow();
+
+      height: 125px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      border-bottom: $delimeter;
+
+      &:after {
+        font-family: 'Ionicons', serif;
+        color: #6c7b8a;
+        font-size: 34px;
+        position: absolute;
+        right: 70px;
+      }
+
+      &.soomo-open {
+        background-color: #ecf0f5;
+
+        &:after {
+          content: '\f3d8';
+        }
+      }
+
+      &.soomo-close:after {
+        content: '\f3d0';
+      }
+
+      .riskCategory-name {
+        font-size: 26px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 21px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          font-size: 50%;
+        }
+
+        .riskCategory-name-content-students {
+          color: $soomo-green;
+        }
+
+        .riskCategory-name-status {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          margin-right: 25px;
+
+          &:before {
+            position: relative;
+            font-size: 60px;
+            line-height: 60px;
+            font-family: 'Ionicons', serif;
+          }
+
+          &.riskCategory-name-status-true:before {
+            left: 0;
+            content: '\f149';
+            color: $soomo-green;
+          }
+
+          &.riskCategory-name-status-false {
+            color: $soomo-red;
+            width: 49px;
+            height: 49px;
+            border: 5px solid $soomo-red;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .riskCategory-body {
+      background-color: #ecf0f5;
+      padding-bottom: 40px;
+      border-bottom: $delimeter;
+
+      .riskCategory-body-row {
+        display: flex;
+        align-items: center;
+        height: 110px;
+        justify-content: space-between;
+        border-bottom: $delimeter;
+
+        .riskCategory-body-row-trend {
+          white-space: nowrap;
+
+          @include media-breakpoint-down(md) {
+            overflow: hidden;
+            width: 68px;
+          }
+          @include media-breakpoint-only(md) {
+            overflow: hidden;
+            width: 64px;
+          }
+        }
+
+        button {
+          height: 34px;
+          max-width: 30%;
+          padding: 0 15px;
+          @include media-breakpoint-down(sm) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

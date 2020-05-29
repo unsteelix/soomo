@@ -1,0 +1,49 @@
+@import '../../../style/functions';
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+body,
+#container {
+  -webkit-text-size-adjust: none !important;
+  zoom: 100% !important;
+  transform: scale(1) !important;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  .unrotatable {
+    display: none;
+  }
+
+  .visible-on-landscape {
+    display: block !important;
+  }
+}
+
+.soomo-outreach {
+  .reachOut {
+    & > :first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+
+      // TODO
+      .faculty-guide-button {
+        color: #f5a623;
+        cursor: pointer;
+
+        label {
+          margin-right: 15px;
+          font-size: 16px;
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

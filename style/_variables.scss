@@ -1,0 +1,36 @@
+@import '~bootstrap/scss/variables';
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+    xs: 0,
+  // Small screen / phone
+    sm: 375px,
+  // Medium screen / tablet
+    md: 750px,
+  // Large screen / desktop
+    lg: 1024px,
+  // Extra large screen / wide desktop
+    xl: 1440px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 750px,
+  lg: 1024px,
+  xl: 1440px,
+);
+
+// custom theme
+
+$soomo-primary-color: #140f26;
+$soomo-secondary-color: #aab3bc;
+$soomo-inverted-color: #fff;
+
+$soomo-green: #14d2b8;
+$soomo-red: #ff3a79;
+$soomo-grey: #dde0e4;
+$soomo-violet: #50a1ff;
+$soomo-dark-violet: #5a7bef;
+
+$delimeter: 2px rgba(108, 123, 138, 0.15) solid;

@@ -1,0 +1,37 @@
+@import '../../../style/functions';
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+.soomo-outreach {
+  .soomo-studentProgress {
+    height: 50px;
+
+    .soomo-studentProgress-block {
+      width: 15px;
+      height: 25px;
+      border-radius: 3px;
+      margin-right: 8px;
+      display: inline-flex;
+      justify-content: center;
+
+      &.block-true {
+        background-color: $soomo-green;
+      }
+
+      &.block-false {
+        background-color: $soomo-red;
+      }
+
+      &.block-unknown {
+        background-color: $soomo-grey;
+      }
+
+      &:after {
+        padding-top: 30px;
+        display: inline-block;
+        content: attr(data-index);
+        font-size: 18px;
+      }
+    }
+  }
+}

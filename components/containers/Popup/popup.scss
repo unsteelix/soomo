@@ -1,0 +1,310 @@
+@import '../../../style/functions';
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+.soomo-outreach {
+  .aside {
+    position: fixed;
+    right: 0;
+    width: 30%;
+    @media screen and (max-height: 900px) {
+      @include media-breakpoint-up(lg) {
+        transform-origin: 100% 0%;
+        transform: scale(0.6849) translateZ(0);
+        backface-visibility: hidden;
+        .icon-bells {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-height: 960px) and (max-width: 1440px) {
+      @include media-breakpoint-up(lg) {
+        transform-origin: 100% 0%;
+        transform: scale(0.6849) translateZ(0);
+        backface-visibility: hidden;
+        .icon-bells {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-height: 500px) {
+      @include media-breakpoint-up(lg) {
+        transform-origin: 100% 0%;
+        transform: scale(0.495) translateZ(0);
+        backface-visibility: hidden;
+        .icon-bells {
+          display: none;
+        }
+      }
+    }
+
+    .soomo-popup-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-bottom: 5%;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      // height: 100%;
+      box-shadow: none;
+      background-color: rgba(20, 15, 38, 0.8);
+
+      @include media-breakpoint-down(md) {
+        max-height: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+
+      .carousel {
+        display: flex;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        //background-color: rgba(20, 15, 38, 0.8);
+      }
+
+      .soomo-message-sender-container {
+        background-color: #ffffff;
+        border-radius: 20px;
+      }
+
+      .carousel-item {
+        border-radius: 20px;
+      }
+
+      .carousel-bullet {
+        color: #d8d8d8;
+        cursor: pointer;
+        display: block;
+        font-size: 60px;
+      }
+
+      .carousel-bullet:hover {
+        color: #aaaaaa;
+        cursor: pointer;
+      }
+
+      .carousel-bullet-checked {
+        color: #f5a623;
+        cursor: pointer;
+        display: block;
+        font-size: 60px;
+      }
+
+      .soomo-popup-close {
+        right: 0px;
+        top: 0;
+        margin-right: 5%;
+        font-size: 40px;
+        color: black;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+
+        &:before {
+          font-family: 'Ionicons', serif;
+          content: '\f406';
+        }
+
+        @include media-breakpoint-down(md) {
+          margin-right: 5%;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-right: -2%;
+        }
+        @include media-breakpoint-down(xs) {
+          margin-right: 5%;
+        }
+      }
+
+      /*
+      @media (max-width: 750px) and (orientation: portrait) {
+        .soomo-popup-close {
+          margin-right: 0%;
+        }
+      }
+      */
+
+      @media (max-width: 1920px) and (min-width: 751px) and (orientation: portrait) {
+        .soomo-popup-close {
+          margin-right: 1%;
+        }
+      }
+
+      .soomo-popup-header {
+        text-align: right;
+      }
+
+      .soomo-popup-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .soomo-popup-title {
+          color: #3b3b4d;
+          font-size: 20px;
+          font-weight: 600;
+          text-align: center;
+          margin-bottom: 20px;
+
+          @include media-breakpoint-down(md) {
+            font-size: 28px;
+          }
+        }
+
+        .soomo-popup-content {
+          color: #353e46;
+          font-size: 16px;
+          text-align: center;
+          width: 100%;
+          @include media-breakpoint-down(md) {
+            font-size: 24px;
+          }
+          @include media-breakpoint-down(sm) {
+            font-size: 18px;
+          }
+          @include media-breakpoint-down(xs) {
+            font-size: 15px;
+          }
+        }
+
+        .icon-bells {
+          height: 107px;
+          background: url('../../../../src_dev/assets/images/mediumalerts.svg') no-repeat;
+          background-position: center;
+          margin-bottom: 45px;
+          @media screen and (max-height: 900px) {
+            display: none;
+          }
+        }
+      }
+
+      .carousel-indicators {
+        position: relative;
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: -100px;
+        width: 95%;
+        background-color: #ffffff;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .carousel > input[type='radio']:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+        display: block;
+        height: auto;
+        max-width: 100%;
+        background: white;
+      }
+
+      .carousel > input[type='radio']:not(checked) + .carousel-item {
+        background: white;
+      }
+
+      @include media-breakpoint-down(lg) {
+        .carousel {
+          display: flex;
+          position: relative;
+          right: 0;
+          bottom: 0;
+          width: 95%;
+          height: 80%;
+        }
+
+        .soomo-message-sender-container {
+          width: 95%;
+          max-height: 97%;
+        }
+
+        .carousel-bullet {
+          color: #d8d8d8;
+          cursor: pointer;
+          display: block;
+          font-size: 60px;
+        }
+
+        .carousel-bullet:hover {
+          color: #aaaaaa;
+          cursor: pointer;
+        }
+
+        .carousel-bullet-checked {
+          color: #f5a623;
+          cursor: pointer;
+          display: block;
+          font-size: 60px;
+        }
+
+        .soomo-popup-close {
+          &:before {
+            font-family: 'Ionicons', serif;
+            content: '\f406';
+            font-size: 50px;
+          }
+        }
+
+        .soomo-popup-body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .icon-bells {
+            height: 107px;
+            background: url('../../../../src_dev/assets/images/mediumalerts.svg') no-repeat;
+            background-position: center;
+            @media screen and (max-height: 900px) {
+              display: none;
+            }
+          }
+        }
+
+        .carousel > input[type='radio']:checked + .carousel-item {
+          position: static;
+          opacity: 100;
+          display: block;
+          height: auto;
+          max-width: 100%;
+          background: white;
+        }
+
+        .carousel > input[type='radio']:not(checked) + .carousel-item {
+          background: white;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        position: relative;
+        box-shadow: rgba(59, 74, 116, 0.33) 0px 0px 9px 0px;
+        border-radius: 20px;
+        background-color: white;
+        padding-bottom: 0;
+        margin-bottom: -85px;
+        z-index: 1;
+
+        .carousel,
+        .carousel-indicators {
+          background-color: transparent;
+        }
+
+        .carousel {
+          width: 100%;
+          height: 100%;
+        }
+
+        .carousel-indicators {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

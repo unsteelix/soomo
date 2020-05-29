@@ -1,0 +1,56 @@
+@import '../../style/functions';
+@import '../../style/variables';
+@import '../../style/mixins';
+
+html {
+  .btn.btn-primary {
+    border-radius: 30px;
+    border-color: #3f97d3;
+    font-size: 18px;
+    font-weight: 600;
+    color: $soomo-inverted-color;
+    height: 60px;
+    padding: 0 77px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include soomo-blue-gradient();
+
+    @include media-breakpoint-up(lg) {
+      height: 40px;
+      width: 151px;
+      padding: 0 0px;
+      font-size: 15px;
+    }
+  }
+}
+
+.soomo-outreach {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 65px;
+  display: flex;
+  overflow-x: hidden;
+
+  .soomo-outreach-cardContainer {
+    width: 70%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 30px 25px;
+    display: flex;
+  }
+
+  @include media-breakpoint-down(md) {
+    .soomo-outreach-cardContainer {
+      width: 100%;
+    }
+  }
+
+  .soomo-main {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import '~bootstrap/scss/mixins';
+
+@mixin soomo-box-shadow() {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+}
+
+@mixin soomo-blue-gradient() {
+  background-image: linear-gradient(to top, #4048ef 0%, #5a7bef 100%);
+}
